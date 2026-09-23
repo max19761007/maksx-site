@@ -1,0 +1,43 @@
+/* MaksX - цвета бренда. Источник: брендбук https://claude.ai/artifact/R4E1q9jhcCsHXaWXZqQXwu
+   Основная тема тёмная (как YouTube-канал). Светлая - атрибут data-theme="light" на <html>. */
+
+:root {
+  color-scheme: dark;
+  --night: #0D1216;         /* фон страницы */
+  --night-raised: #15201F;  /* карточки, формы */
+  --line: #243331;          /* разделители, рамки полей */
+  --ink: #F2F5F3;           /* основной текст */
+  --ink-muted: #9DB0AB;     /* подписи, даты */
+  --bug: #1E8E62;           /* фирменный зелёный: "X" в логотипе, кнопки */
+  --bug-text: #2FB27C;      /* зелёные ссылки и мелкий текст на тёмном */
+  --on-bug: #0D1216;        /* текст на кнопке bug */
+  --glass: #2B5E57;         /* бирюза треснувшего стекла: крупные плашки */
+  --on-glass: #F2F5F3;      /* текст на glass */
+  --volt: #FFD21F;          /* жёлтый сигнал: одно пятно на экран */
+  --on-volt: #0D1216;       /* текст на volt */
+  --deep: #1B2B29;          /* тёмные секции, блоки кода и схем */
+
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-48: 48px;
+
+  --radius-sm: 6px;         /* поля ввода */
+  --radius-lg: 16px;        /* карточки, плашки */
+  --radius-pill: 999px;     /* кнопки, теги */
+
+  --focus-ring: 0 0 0 2px var(--night), 0 0 0 4px var(--bug-text);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --night: #F2F5F3;
+  --night-raised: #FFFFFF;
+  --line: #D3DCD8;
+  --ink: #0D1216;
+  --ink-muted: #4A5A56;
+  --bug: #157A52;
+  --bug-text: #157A52;
+  --on-bug: #FFFFFF;
+  --deep: #0D1216;
+}

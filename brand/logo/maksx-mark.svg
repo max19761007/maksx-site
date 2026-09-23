@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="MaksX">
+  <circle cx="64" cy="64" r="64" fill="#0D1216"/>
+  <!-- "X" нарисован фигурами, чтобы знак не зависел от шрифта: подходит для аватарки и фавиконки -->
+  <g fill="#1E8E62">
+    <polygon points="34,30 52,30 94,98 76,98"/>
+    <polygon points="76,30 94,30 52,98 34,98"/>
+  </g>
+</svg>

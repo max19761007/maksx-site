@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MaksX - сайты и автоматизация для бизнеса</title>
+  <meta name="description" content="Лендинги под ключ и автоматизация в n8n с AI-агентами. Сначала находим, где у вас теряется время, потом убираем это место. Цены и сроки на странице.">
+  <link rel="icon" href="brand/logo/png/maksx-mark-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="brand/logo/png/maksx-mark-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Onest:wght@400;500&display=swap">
+  <link rel="stylesheet" href="brand/colors/brand.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="logo" href="#" aria-label="MaksX, в начало страницы">Maks<span>X</span></a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#cases">Проекты</a>
+        <a href="#prices">Цены</a>
+        <a href="#method">Как работаю</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a class="btn btn-sm" href="https://t.me/MaxSmoll">Написать</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Первый экран: оффер + схема «было / стало» -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-title">Сайт, который приносит заявки, и автоматизация, которая их обрабатывает</h1>
+          <p class="lead">Делаю лендинги и настраиваю автоматизацию в n8n с AI-агентами для малого бизнеса и экспертов. Сначала нахожу место, где у вас теряется время, потом убираю именно его.</p>
+          <div class="hero-cta">
+            <a class="btn" href="https://t.me/MaxSmoll">Разобрать мою задачу бесплатно</a>
+            <a class="link" href="#prices">Цены и сроки</a>
+          </div>
+          <p class="note">Разбор - 1 час в Telegram или по видеосвязи. Скажу, что автоматизировать, сколько это стоит и окупится ли.</p>
+        </div>
+
+        <figure class="pipe" aria-labelledby="pipe-cap">
+          <div class="pipe-head">
+            <figcaption id="pipe-cap">Путь одной заявки</figcaption>
+            <div class="switch" role="tablist" aria-label="Показать процесс">
+              <button role="tab" id="tab-before" aria-selected="true" aria-controls="flow-before">Было</button>
+              <button role="tab" id="tab-after" aria-selected="false" aria-controls="flow-after" tabindex="-1">Стало</button>
+            </div>
+          </div>
+
+          <ol class="flow" id="flow-before" role="tabpanel" aria-labelledby="tab-before">
+            <li><b>Заявка падает на почту</b><span>вместе со спамом и рассылками</span></li>
+            <li><b>Вы замечаете её через несколько часов</b><span>между встречами и звонками</span></li>
+            <li class="jam"><b>Переписываете данные в таблицу руками</b><span>узкое место: здесь теряется время, а заявки теряются совсем</span></li>
+            <li><b>Отвечаете, когда дошли руки</b><span>клиент уже написал конкурентам</span></li>
+          </ol>
+
+          <ol class="flow flow-after" id="flow-after" role="tabpanel" aria-labelledby="tab-after" hidden>
+            <li><b>Клиент оставляет заявку на сайте</b><span>имя, телефон, пара слов о задаче</span></li>
+            <li><b>AI-агент разбирает её</b><span>что нужно клиенту, насколько срочно</span></li>
+            <li><b>Строка появляется в Google Таблице</b><span>ничего не надо переписывать</span></li>
+            <li><b>Вам приходит сообщение в Telegram</b><span>через минуту, с кнопкой «позвонить»</span></li>
+            <li><b>Клиент сразу получает автоответ</b><span>«Заявку получили, перезвоним сегодня до 18:00». А звоните уже вы</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Бегущая строка: только проверяемые факты -->
+    <div class="marquee" aria-label="Факты о проектах">
+      <div class="marquee-track">
+        <ul>
+          <li>2 недели постов вперёд в контент-конвейере</li>
+          <li>Telegram и MAX одним ботом</li>
+          <li>0 ₽ в месяц за хостинг сайта MaxStyle</li>
+          <li>Цель школы - минус 30% времени на пост</li>
+          <li>2-5 часов экономии каждый день</li>
+          <li>Месяц сопровождения бесплатно</li>
+          <!-- TODO Максим: добавить 1-2 цифры результата клиентов -->
+        </ul>
+        <ul aria-hidden="true">
+          <li>2 недели постов вперёд в контент-конвейере</li>
+          <li>Telegram и MAX одним ботом</li>
+          <li>0 ₽ в месяц за хостинг сайта MaxStyle</li>
+          <li>Цель школы - минус 30% времени на пост</li>
+          <li>2-5 часов экономии каждый день</li>
+          <li>Месяц сопровождения бесплатно</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Кто делает -->
+    <section class="sec" id="about" aria-labelledby="about-h">
+      <div class="wrap about-grid">
+        <figure class="about-photo">
+          <img src="img/maxim.webp" width="2000" height="1116" alt="Максим Смоляков за ноутбуком" loading="lazy">
+        </figure>
+        <div class="about-text">
+          <h2 id="about-h" class="reveal">Заявки теряются не на сайте, а после него</h2>
+          <p>Сайт может быть красивым, но если заявка час лежит на почте, клиент уже ушёл к тому, кто ответил быстрее. Поэтому я делаю и то, и другое: страницу, которая приводит людей, и автоматизацию, которая не даёт их потерять.</p>
+          <p>Меня зовут Максим Смоляков. Всё, что предлагаю клиентам, сначала запускаю у себя: свой сайт, свой контент-конвейер, свои боты. Про то, как это устроено, рассказываю на YouTube-канале «Баг в прошивке».</p>
+          <!-- TODO Максим: шоурил 20-40 секунд из роликов канала -->
+          <a class="showreel" href="https://www.youtube.com/@MaksX-Bag">
+            <span class="play" aria-hidden="true"></span>
+            <span><b>Смотреть на YouTube</b>Канал «Баг в прошивке»: нейросети и автоматизация без магии</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Проекты: большие карточки с цифрами. Только свои проекты, цифры без источника не ставим -->
+    <section class="sec sec-deep" id="cases" aria-labelledby="cases-h">
+      <div class="wrap">
+        <h2 id="cases-h" class="reveal">Проекты и что они дали</h2>
+        <p class="sec-lead">Собственные проекты - на них я проверяю всё, прежде чем предлагать клиентам.</p>
+
+        <div class="cases">
+          <article class="case">
+            <div class="case-media">
+              <img src="img/case-maxstyle.png" width="1440" height="900" alt="Первый экран сайта студии MaxStyle" loading="lazy">
+            </div>
+            <div class="case-body">
+              <p class="case-kind">Сайт, Москва</p>
+              <h3>Лендинг студии MaxStyle</h3>
+              <p>Одностраничник парикмахера-стилиста: услуги, прайс, галерея работ, онлайн-запись и отзывы. Сделан с нуля и работает на бесплатном хостинге.</p>
+              <dl class="metrics">
+                <div><dt>0 ₽</dt><dd>в месяц за хостинг</dd></div>
+                <div><dt>24/7</dt><dd>онлайн-запись прямо с сайта</dd></div>
+                <!-- TODO Максим: когда будет - сколько записей в месяц приходит через сайт -->
+              </dl>
+              <a class="link" href="https://max19761007.github.io/maxstyle-site/" target="_blank" rel="noopener">Открыть сайт</a>
+            </div>
+          </article>
+
+          <article class="case">
+            <!-- Фрагмент реальной таблицы «Контент-план MaksX - Telegram и MAX», сентябрь 2026 -->
+            <div class="case-media sheet" role="img" aria-label="Фрагмент Google Таблицы контент-плана: даты, заголовки постов и статусы">
+              <div class="sheet-bar"><span></span><span></span><span></span><b>Контент-план MaksX - Telegram и MAX</b></div>
+              <table aria-hidden="true">
+                <thead><tr><th>Дата</th><th>Заголовок поста</th><th>Статус</th></tr></thead>
+                <tbody>
+                  <tr><td>21.09</td><td>Почему вы не замечаете работу, которая съедает ваш месяц</td><td><i class="st st-done">опубликовано</i></td></tr>
+                  <tr><td>23.09</td><td>n8n или Make: где вы упрётесь в потолок через полгода</td><td><i class="st st-ready">черновик готов</i></td></tr>
+                  <tr><td>24.09</td><td>Сотрудник саботирует автоматизацию не из вредности</td><td><i class="st st-ready">черновик готов</i></td></tr>
+                  <tr><td>25.09</td><td>Три ноды n8n, которых хватит на 80 процентов задач</td><td><i class="st">задумано</i></td></tr>
+                  <tr><td>26.09</td><td>Вы верите нейросети больше, чем человеку. Вот почему</td><td><i class="st">задумано</i></td></tr>
+                  <tr><td>27.09</td><td>Вебхук простыми словами: почему без него ничего не работает</td><td><i class="st">задумано</i></td></tr>
+                  <tr><td>28.09</td><td>Сначала наведу порядок, потом автоматизирую. Порядок не наступит</td><td><i class="st">задумано</i></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="case-body">
+              <p class="case-kind">Автоматизация</p>
+              <h3>Контент-конвейер для Telegram и MAX</h3>
+              <p>Темы и готовые посты собираются в Google Таблицу с расписанием, бот публикует их в оба канала, а отчёт о работе приходит на почту и в Telegram.</p>
+              <dl class="metrics">
+                <div><dt>2 недели</dt><dd>постов в плане вперёд</dd></div>
+                <div><dt>2 канала</dt><dd>Telegram и MAX одним ботом</dd></div>
+                <div><dt>2-5 ч</dt><dd>экономии каждый день</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="case">
+            <!-- По таблице «Дерево веток - автоматизация, УТП, аудитория» -->
+            <div class="case-media sheet" role="img" aria-label="Фрагмент таблицы плана: три ветки, узкое место и цель каждой">
+              <div class="sheet-bar"><span></span><span></span><span></span><b>Дерево веток: продвижение школы</b></div>
+              <table class="sheet-plan" aria-hidden="true">
+                <thead><tr><th>Ветка</th><th>Узкое место</th><th>Цель за 14 дней</th></tr></thead>
+                <tbody>
+                  <tr><td>Посты</td><td>Подготовка и редактура текста</td><td>Минус 30% времени на текст</td></tr>
+                  <tr><td>УТП</td><td>Отличия, подтверждённые фактами</td><td>Одно утверждённое УТП</td></tr>
+                  <tr><td>Аудитория</td><td>Реальные вопросы и возражения</td><td>Три проверенные карточки</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="case-body">
+              <p class="case-kind">Процесс</p>
+              <h3>План автоматизации постов для школы</h3>
+              <p>Разложили подготовку постов на этапы, собрали таблицу замеров и поставили цель. Автоматизация в n8n - только после ручного эталона. Итог добавлю сюда после замеров.</p>
+              <dl class="metrics">
+                <div><dt>2 дня</dt><dd>замера до изменений</dd></div>
+                <div><dt>−30%</dt><dd>цель по времени на пост</dd></div>
+                <div><dt>3 ветки</dt><dd>посты, УТП и аудитория</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены: прайс-лист строками, а не карточками -->
+    <section class="sec" id="prices" aria-labelledby="prices-h">
+      <div class="wrap">
+        <h2 id="prices-h" class="reveal">Что делаю, за сколько и за какой срок</h2>
+        <p class="sec-lead">Цену и срок называю до старта, после бесплатного разбора задачи.</p>
+
+        <div class="price-list">
+          <article class="price-row">
+            <div class="pr-main">
+              <h3>Лендинг под ключ</h3>
+              <p>Одностраничный сайт под одну услугу: тексты, дизайн, форма заявки, адаптация под телефон, публикация на вашем домене.</p>
+              <p class="pr-for">Подойдёт, если сейчас клиенты приходят только из соцсетей и сарафана.</p>
+            </div>
+            <dl class="pr-facts">
+              <div><dt>Стоимость</dt><dd>5 000-8 000 ₽</dd></div>
+              <div><dt>Срок</dt><dd>1-2 дня</dd></div>
+            </dl>
+          </article>
+
+          <article class="price-row">
+            <div class="pr-main">
+              <h3>Автоматизация одного процесса</h3>
+              <p>Заявки, запись, напоминания, отчёты или посты по расписанию. Настраиваю в n8n, подключаю AI-агента, если он нужен, и показываю, как всем пользоваться.</p>
+              <p class="pr-for">Подойдёт, если одна и та же рутина съедает у вас час-два каждый день.</p>
+            </div>
+            <dl class="pr-facts">
+              <div><dt>Стоимость</dt><dd>10 000-15 000 ₽</dd></div>
+              <div><dt>Срок</dt><dd>5 рабочих дней</dd></div>
+            </dl>
+          </article>
+
+          <article class="price-row price-row-main">
+            <div class="pr-main">
+              <h3>Сайт + автоматизация заявок</h3>
+              <p>Лендинг и сразу обработка заявок с него: таблица, уведомление вам в Telegram, автоответ клиенту. Схема как на первом экране.</p>
+              <p class="pr-for">Подойдёт, если хотите запустить новое направление и не собирать всё по частям.</p>
+            </div>
+            <dl class="pr-facts">
+              <div><dt>Стоимость</dt><dd>30 000 ₽</dd></div>
+              <div><dt>Срок</dt><dd>10 рабочих дней</dd></div>
+            </dl>
+          </article>
+
+          <article class="price-row price-row-free">
+            <div class="pr-main">
+              <h3>Разбор задачи</h3>
+              <p>Смотрим ваш процесс, находим узкое место, я называю цену и срок. Если автоматизация не окупится, так и скажу.</p>
+            </div>
+            <dl class="pr-facts">
+              <div><dt>Стоимость</dt><dd>бесплатно</dd></div>
+              <div><dt>Срок</dt><dd>1 час</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="after-note">Первый месяц после запуска сопровождаю бесплатно: если что-то перестало работать, чиню. Дальше - подписка на сопровождение за 5 000 ₽ в месяц.</p>
+      </div>
+    </section>
+
+    <!-- Что можно автоматизировать + расшифровка терминов -->
+    <section class="sec sec-deep" aria-labelledby="tasks-h">
+      <div class="wrap tasks-grid">
+        <div>
+          <h2 id="tasks-h" class="reveal">Что обычно забирает автоматизация</h2>
+          <ul class="tasks">
+            <li><b>Заявки с сайта и из соцсетей</b> - собираются в одну таблицу, вам приходит уведомление.</li>
+            <li><b>Ответы на частые вопросы</b> - про цены, адрес и график клиенту отвечает бот, сложные вопросы он передаёт вам.</li>
+            <li><b>Напоминания о записи</b> - клиент получает сообщение за день до визита, неявок становится меньше.</li>
+            <li><b>Посты в Telegram и MAX</b> - темы и тексты готовятся заранее и выходят по расписанию.</li>
+            <li><b>Отчёты</b> - цифры за неделю сами собираются из таблиц и приходят вам в понедельник утром.</li>
+          </ul>
+        </div>
+
+        <aside class="glossary" aria-labelledby="gl-h">
+          <h3 id="gl-h">Слова, которые встречаются на странице</h3>
+          <dl>
+            <dt>n8n</dt>
+            <dd>Сервис, который связывает ваши программы между собой: сайт, таблицу, почту, Telegram. Работает сам, без вашего участия.</dd>
+            <dt>AI-агент</dt>
+            <dd>Нейросеть с конкретной задачей: прочитать заявку, ответить на вопрос, написать черновик поста. Решения, которые важны, всё равно принимаете вы.</dd>
+            <dt>Лендинг</dt>
+            <dd>Сайт из одной страницы под одну услугу. Его задача - чтобы человек оставил заявку.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Метод: реальная последовательность шагов, поэтому нумерация -->
+    <section class="sec" id="method" aria-labelledby="method-h">
+      <div class="wrap">
+        <h2 id="method-h" class="reveal">Сначала замер, потом автоматизация</h2>
+        <p class="sec-lead">Если автоматизировать процесс, который ещё не отлажен, лишняя работа просто начнёт происходить быстрее. Поэтому идём по шагам.</p>
+
+        <ol class="steps">
+          <li>
+            <h3>Разбираем процесс как трубу</h3>
+            <p>Выписываем все этапы: от того, как клиент нашёл вас, до оплаты. Два дня вы записываете, сколько минут уходит на каждый этап.</p>
+          </li>
+          <li>
+            <h3>Находим узкое место</h3>
+            <p>По замерам, а не по ощущениям. Обычно это одно место, где копится большая часть потерь.</p>
+          </li>
+          <li>
+            <h3>Делаем эталон вручную</h3>
+            <p>Прогоняем несколько реальных случаев по новым правилам. Так видно, что именно отдавать машине.</p>
+          </li>
+          <li>
+            <h3>Автоматизируем и сверяем с целью</h3>
+            <p>Цель ставим цифрой заранее. Например, минус 30% времени на этапе за 14 дней. Через две недели сравниваем с замером.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- Вопросы -->
+    <section class="sec" id="faq" aria-labelledby="faq-h">
+      <div class="wrap faq-wrap">
+        <h2 id="faq-h" class="reveal">Частые вопросы</h2>
+        <div class="faq">
+          <details>
+            <summary>Мне нужно разбираться в технике?</summary>
+            <p>Нет. Всё настраиваю я, а вам показываю, как пользоваться, и оставляю короткую инструкцию. Если вы умеете пользоваться Telegram и таблицей, этого хватит.</p>
+          </details>
+          <details>
+            <summary>Что будет, если автоматизация сломается?</summary>
+            <p>Первый месяц после запуска чиню бесплатно. Дальше - подписка на сопровождение за 5 000 ₽ в месяц: слежу, чтобы всё работало, и вношу небольшие правки. Уведомление об ошибке настраиваю так, чтобы оно приходило и мне.</p>
+          </details>
+          <details>
+            <summary>Кому принадлежат сайт и сценарии?</summary>
+            <p>Вам. Домен, хостинг, таблицы и аккаунт n8n оформляются на вас, доступы передаю после сдачи. Если захотите уйти к другому подрядчику, всё останется у вас.</p>
+          </details>
+          <details>
+            <summary>А что с персональными данными клиентов?</summary>
+            <p>Учитываю 152-ФЗ: данные клиентов не отправляю в зарубежные нейросети, храню их в ваших российских сервисах, а на этапе настройки работаю с тестовыми данными.</p>
+          </details>
+          <details>
+            <summary>Сколько платить каждый месяц?</summary>
+            <p>Сайт на простом хостинге - от 0 до нескольких сотен рублей в месяц плюс домен. Автоматизация - от 0 ₽, если n8n стоит на вашем сервере, до пары тысяч рублей за облако и нейросети. Точную сумму называю на разборе.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap contact-in">
+        <div class="contact-intro">
+          <h2 id="contact-h" class="reveal">Расскажите, что у вас съедает время</h2>
+          <p>Отвечаю в течение дня. Разбор бесплатный и ни к чему не обязывает.</p>
+          <p class="contact-alt">Удобнее написать самому?</p>
+          <div class="contact-links">
+            <a class="btn btn-glass" href="https://t.me/MaxSmoll">Telegram</a>
+            <a class="btn-line" href="https://max.ru/u/f9LHodD0cOKWJ7ifAfs9Ckm4t7YH3zszXqfkqQuyvrZZg6iDipzBP9mNk2c">MAX</a>
+          </div>
+        </div>
+
+        <!-- Заявка уходит в n8n (webhook), оттуда в таблицу и уведомлением в Telegram. Адрес - в main.js -->
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="field">
+            <label for="f-name">Как к вам обращаться</label>
+            <input id="f-name" name="name" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact">Telegram или телефон</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="tel" required placeholder="@username или +7">
+          </div>
+
+          <fieldset class="chips">
+            <legend>Что нужно</legend>
+            <label><input type="checkbox" name="service" value="Лендинг"><span>Лендинг</span></label>
+            <label><input type="checkbox" name="service" value="Автоматизация"><span>Автоматизация</span></label>
+            <label><input type="checkbox" name="service" value="Сайт + автоматизация"><span>Сайт + автоматизация</span></label>
+            <label><input type="checkbox" name="service" value="Пока не знаю"><span>Пока не знаю</span></label>
+          </fieldset>
+
+          <fieldset class="chips">
+            <legend>Бюджет</legend>
+            <label><input type="radio" name="budget" value="до 10 000"><span>до 10 000 ₽</span></label>
+            <label><input type="radio" name="budget" value="10-30 000"><span>10-30 000 ₽</span></label>
+            <label><input type="radio" name="budget" value="больше 30 000"><span>больше 30 000 ₽</span></label>
+            <label><input type="radio" name="budget" value="обсудим"><span>Обсудим на разборе</span></label>
+          </fieldset>
+
+          <div class="field">
+            <label for="f-task">Коротко о задаче <span class="opt">- можно пропустить</span></label>
+            <textarea id="f-task" name="task" rows="3"></textarea>
+          </div>
+
+          <!-- Ловушка для спам-ботов: люди это поле не видят и не заполняют -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Сайт</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Согласие отдельной галочкой, не отмечено заранее (152-ФЗ, ст. 9) -->
+          <label class="agree">
+            <input type="checkbox" name="agree" id="f-agree" required>
+            <span>Соглашаюсь на <a href="politika.html#soglasie" target="_blank">обработку персональных данных</a> по <a href="politika.html" target="_blank">политике конфиденциальности</a></span>
+          </label>
+          <button class="btn btn-glass" type="submit">Отправить заявку</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <p>ИП Смоляков Максим Игорьевич, ИНН 504308849630. <a href="mailto:max_10087@mail.ru">max_10087@mail.ru</a></p>
+      <div class="foot-links">
+        <a class="link" href="politika.html">Политика конфиденциальности</a>
+        <a class="link" href="https://www.youtube.com/@MaksX-Bag">Канал на YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
