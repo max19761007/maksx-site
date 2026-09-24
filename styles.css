@@ -189,6 +189,21 @@ a { color: inherit; }
 .marquee li::before { content: "/"; color: var(--bug-text); margin-right: 18px; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
+/* Бегущая строка: по ней раз в несколько секунд проходит световая волна, в ритме главной кнопки */
+.marquee { position: relative; isolation: isolate; }
+.marquee::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(100deg, transparent 30%, color-mix(in srgb, var(--ink) 22%, transparent) 46%,
+              color-mix(in srgb, var(--bug-text) 30%, transparent) 50%, transparent 66%);
+  transform: translateX(-100%);
+  animation: marquee-wave 5s ease-in-out 2.2s infinite;
+}
+.marquee:hover::after { animation-duration: 2.5s; }
+@keyframes marquee-wave {
+  0% { transform: translateX(-100%); }
+  30%, 100% { transform: translateX(100%); }
+}
+
 /* Кто делает */
 .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
 .about-photo { margin: 0; }
@@ -373,5 +388,53 @@ a { color: inherit; }
   .flow.is-entering li { animation: none; }
   .faq summary::after { transition: none; }
   .marquee-track { animation: none; }
+  .marquee::after { display: none; }
   .marquee { overflow-x: auto; }
+}
+
+/* Живые кнопки: блик пробегает по кнопке, вокруг зелёное свечение, кнопка приподнимается */
+.btn, .btn-line {
+  position: relative; overflow: hidden; isolation: isolate;
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s ease, filter .15s;
+}
+.btn::after, .btn-line::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, color-mix(in srgb, var(--ink) 55%, transparent) 50%, transparent 65%);
+  transform: translateX(-120%);
+}
+.btn:hover, .btn-line:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--bug-text) 60%, transparent),
+              0 8px 28px -6px color-mix(in srgb, var(--bug-text) 70%, transparent);
+}
+.btn:hover::after, .btn-line:hover::after { transform: translateX(120%); transition: transform .7s ease; }
+.btn:active, .btn-line:active { transform: translateY(0) scale(.98); transition-duration: .08s; }
+.btn:focus-visible, .btn-line:focus-visible { box-shadow: var(--focus-ring); }
+.btn-glass::after { background: linear-gradient(105deg, transparent 35%, color-mix(in srgb, var(--bug-text) 45%, transparent) 50%, transparent 65%); }
+
+/* Главная кнопка в первом экране сама бликует раз в несколько секунд и мягко светится */
+.hero-cta .btn::after { animation: btn-sweep 5s ease-in-out 1.5s infinite; }
+.hero-cta .btn { animation: btn-glow 5s ease-in-out 1.5s infinite; }
+.hero-cta .btn:hover::after, .hero-cta .btn:hover { animation: none; }
+@keyframes btn-sweep {
+  0% { transform: translateX(-120%); }
+  18%, 100% { transform: translateX(120%); }
+}
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  12% { box-shadow: 0 0 24px -2px color-mix(in srgb, var(--bug-text) 65%, transparent); }
+  30% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Переключатель «Было/Стало» и чипы формы */
+.switch button, .chips span { transition: background .2s, color .2s, box-shadow .2s, transform .2s; }
+.switch button:hover:not([aria-selected="true"]) { color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.chips label:hover span { color: var(--ink); border-color: var(--bug-text); transform: translateY(-1px);
+  box-shadow: 0 4px 16px -6px color-mix(in srgb, var(--bug-text) 70%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn-line, .chips span { transition: box-shadow .2s; }
+  .btn:hover, .btn-line:hover, .chips label:hover span { transform: none; }
+  .btn::after, .btn-line::after { display: none; }
+  .hero-cta .btn { animation: none; }
 }
