@@ -1,0 +1,92 @@
+/* MaksX/beauty - дополняет ../styles.css. Только для этой страницы. Цвета - из brand/colors/brand.css. */
+
+/* Бейдж «бьюти» у логотипа */
+.badge {
+  font: 500 13px/1 var(--font-sans);
+  color: var(--on-glass);
+  background: var(--glass);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  margin-left: -8px;
+}
+
+/* Первый экран: текст + карточка отзывов вместо схемы «было/стало» */
+.hero-b { padding: 56px 0; }
+.hero-b > .wrap { width: 100%; }
+.hero-b-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
+.hero-b h1 { font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; max-width: 16ch; }
+
+/* Карточка на Яндекс Картах - главный визуальный образ страницы */
+.rate-card {
+  margin: 0; background: var(--night-raised); border-radius: var(--radius-lg);
+  padding: 28px 28px 24px; display: flex; flex-direction: column; gap: 4px;
+}
+.rate-cap { font: 700 14px/1.3 var(--font-display); color: var(--ink-muted); margin-bottom: 16px; }
+.rate-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.rate-name { font: 700 18px/1.3 var(--font-display); }
+.rate-score { font: 800 32px/1 var(--font-display); color: var(--bug-text); }
+.rate-stars { display: flex; gap: 4px; margin-top: 10px; }
+.rate-stars span { width: 20px; height: 20px; background: var(--volt);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.rate-count { margin-top: 8px; font-size: 14px; color: var(--ink-muted); }
+.rate-feed { list-style: none; margin: 20px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; gap: 12px; }
+.rate-good { font-size: 15px; line-height: 1.5; }
+.rate-new { display: inline-flex; align-self: start; font: 700 13px/1.3 var(--font-display); color: var(--on-bug); background: var(--bug); padding: 6px 12px; border-radius: var(--radius-pill); }
+.rate-disclaimer { margin-top: 18px; font-size: 12px; line-height: 1.4; color: var(--ink-muted); opacity: .8; }
+
+/* Тарифы: карточки-чек-листы, как меню услуг в салоне */
+.tariffs { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+.tariff {
+  background: var(--night-raised); border-radius: var(--radius-lg); padding: 32px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.tariff-main { background: var(--glass); color: var(--on-glass); }
+.tariff-head h3 { font-size: 26px; }
+.tariff-for { margin-top: 6px; font-size: 14px; color: var(--ink-muted); }
+.tariff-main .tariff-for { color: var(--on-glass); opacity: .8; }
+
+.tariff-price { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tariff-main .tariff-price { border-color: color-mix(in srgb, var(--on-glass) 20%, transparent); }
+.tariff-price dt { font-size: 13px; color: var(--ink-muted); }
+.tariff-main .tariff-price dt { color: var(--on-glass); opacity: .75; }
+.tariff-price dd { margin: 4px 0 0; font: 800 26px/1.15 var(--font-display); letter-spacing: -0.01em; }
+.tariff-price dd span { display: block; margin-top: 6px; font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }
+.tariff-main .tariff-price dd span { color: var(--on-glass); opacity: .75; }
+
+.tariff-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; flex: 1; }
+.tariff-list li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.45; }
+.tariff-list li::before {
+  content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bug);
+}
+.tariff-main .tariff-list li::before { background: var(--on-glass); }
+.tariff-list li::after {
+  content: ""; position: absolute; left: 5px; top: 8px; width: 7px; height: 4px;
+  border-left: 2px solid var(--on-bug); border-bottom: 2px solid var(--on-bug); transform: rotate(-45deg);
+}
+.tariff-main .tariff-list li::after { border-color: var(--glass); }
+
+.tariff-cta { justify-self: start; }
+
+/* Кейс-заглушка */
+.case-todo {
+  margin-top: 40px; display: grid; place-items: center; min-height: 220px;
+  border: 2px dashed var(--line); border-radius: var(--radius-lg); color: var(--ink-muted);
+  font-size: 15px; text-align: center; padding: 24px;
+}
+
+/* Нумерованные шаги: 4 колонки вместо 4 из главной темы, тот же приём */
+.steps-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 960px) {
+  .hero-b-grid { grid-template-columns: 1fr; gap: 40px; }
+  .tariffs { grid-template-columns: 1fr; }
+  .steps-4 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero-b { padding: 40px 0 56px; }
+  .badge { display: none; }
+  .tariff { padding: 24px 20px; }
+  .steps-4 { grid-template-columns: 1fr; }
+}
